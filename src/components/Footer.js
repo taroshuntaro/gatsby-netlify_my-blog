@@ -16,7 +16,7 @@ const Footer = class extends React.Component {
               <div className="column is-4"></div>
               {/* ▲▲▲ offset ※is-offset-x が効かない為 ▲▲▲ */}
               <div className="column is-4 social">
-                <a title="facebook" href="https://github.com/taroshuntaro/">
+                <a title="github" href="https://github.com/taroshuntaro/">
                   <img
                     src={github}
                     alt="Github"
