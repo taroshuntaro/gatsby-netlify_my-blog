@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 //import logo from '../img/logo.svg';
+import Icon from '../img/site-icon.jpg';
 import github from '../img/github-icon.svg';
 import facebook from '../img/social/facebook.svg';
 import instagram from '../img/social/instagram.svg';
@@ -45,9 +46,8 @@ const Navbar = class extends React.Component {
         <div className="container">
           <div className="navbar-brand">
             <Link to="/" className="navbar-item" title="Logo">
-              {/*<img src={logo} alt="Kaldi" style={{ width: '88px' }} />*/}
-              {/* TODO:サイトロゴイメージに変更 */}
-              taroshuntaro blog
+              <img src={Icon} alt="SiteIcon" />
+              &nbsp;&nbsp;taroshuntaro blog
             </Link>
             {/* Hamburger menu */}
             <div
