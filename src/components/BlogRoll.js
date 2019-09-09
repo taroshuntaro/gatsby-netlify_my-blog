@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { kebabCase } from 'lodash';
 import { Link, graphql, StaticQuery } from 'gatsby';
-import PreviewCompatibleImage from './PreviewCompatibleImage';
+//import PreviewCompatibleImage from './PreviewCompatibleImage';
 
 class BlogRoll extends React.Component {
   render() {
@@ -22,13 +22,15 @@ class BlogRoll extends React.Component {
                     <div className="column is-12">
                       <header>
                         <p className="post-meta">
-                          <span className="title has-text-primary is-size-4">
+                          <span className="title is-size-4">
                             {post.frontmatter.title}
                           </span>
                         </p>
                       </header>
                       {/* ▼▼▼ 記事本文（一部） ▼▼▼ */}
-                      <p>{post.excerpt}</p>
+                      <p style={{ color: 'rgb(128, 128, 128)' }}>
+                        {post.excerpt}
+                      </p>
                       <br />
                       {/* ▼▼▼ 投稿日時 ▼▼▼ */}
                       <span className="tag">
