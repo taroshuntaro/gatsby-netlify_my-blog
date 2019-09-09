@@ -49,10 +49,8 @@ export const IndexPageTemplate = ({ image, title, subheading }) => (
       <div className="container">
         <div className="columns">
           <div className="column is-10 is-offset-1">
+            {/* 記事一覧 */}
             <div className="content">
-              <h3 className="has-text-weight-semibold is-size-4">
-                Latest stories
-              </h3>
               <BlogRoll />
             </div>
           </div>

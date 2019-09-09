@@ -8,9 +8,18 @@ import twitter from '../img/social/twitter.svg';
 const Footer = class extends React.Component {
   render() {
     return (
-      <footer className="footer has-background-black has-text-white-ter">
-        <div className="content has-text-centered has-background-black has-text-white-ter">
-          <div className="container has-background-black has-text-white-ter">
+      <footer
+        className="footer has-background-cadetblue has-text-white-ter"
+        style={{ backgroundColor: 'cadetblue' }}
+      >
+        <div
+          className="content has-text-centered has-text-white-ter"
+          style={{ backgroundColor: 'cadetblue' }}
+        >
+          <div
+            className="container has-text-white-ter"
+            style={{ backgroundColor: 'cadetblue' }}
+          >
             <div className="columns is-mobile">
               {/* ▼▼▼ offset ※is-offset-x が効かない為 ▼▼▼ */}
               <div className="column is-4"></div>
