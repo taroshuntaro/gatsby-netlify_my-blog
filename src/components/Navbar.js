@@ -47,7 +47,7 @@ const Navbar = class extends React.Component {
             <Link to="/" className="navbar-item" title="Logo">
               {/*<img src={logo} alt="Kaldi" style={{ width: '88px' }} />*/}
               {/* TODO:サイトロゴイメージに変更 */}
-              taroshuntaro's blog
+              taroshuntaro blog
             </Link>
             {/* Hamburger menu */}
             <div
