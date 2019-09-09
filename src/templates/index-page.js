@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
 
 import Layout from '../components/Layout';
 import BlogRoll from '../components/BlogRoll';
@@ -13,8 +13,8 @@ export const IndexPageTemplate = ({ image, title, subheading }) => (
         backgroundImage: `url(${
           !!image.childImageSharp ? image.childImageSharp.fluid.src : image
         })`,
-        backgroundPosition: `top left`,
-        backgroundAttachment: `fixed`
+        backgroundPosition: `50%`,
+        backgroundAttachment: `scroll`
       }}
     >
       <div
@@ -30,45 +30,28 @@ export const IndexPageTemplate = ({ image, title, subheading }) => (
         <h1
           className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
           style={{
-            boxShadow:
-              'rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px',
-            backgroundColor: 'rgb(255, 68, 0)',
+            backgroundColor: 'rgba(128, 128, 128, 0.5)',
             color: 'white',
             lineHeight: '1',
+            letterSpacing: '1px',
             padding: '0.25em'
           }}
         >
           {title}
+          <br />
+          <span className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen">
+            {subheading}
+          </span>
         </h1>
-        <h3
-          className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
-          style={{
-            boxShadow:
-              'rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px',
-            backgroundColor: 'rgb(255, 68, 0)',
-            color: 'white',
-            lineHeight: '1',
-            padding: '0.25em'
-          }}
-        >
-          {subheading}
-        </h3>
       </div>
     </div>
     <section className="section section--gradient">
       <div className="container">
         <div className="columns">
           <div className="column is-10 is-offset-1">
+            {/* 記事一覧 */}
             <div className="content">
-              <h3 className="has-text-weight-semibold is-size-2">
-                Latest stories
-              </h3>
               <BlogRoll />
-              <div className="column is-12 has-text-centered">
-                <Link className="btn" to="/blog">
-                  Read more
-                </Link>
-              </div>
             </div>
           </div>
         </div>
