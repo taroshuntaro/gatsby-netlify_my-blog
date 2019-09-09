@@ -1,7 +1,7 @@
 ---
 templateKey: index-page
-title: taroshuntaro's blog
+title: taroshuntaro blog
 image: /img/home-header00.jpg
-heading: taroshuntaro's blog
+heading: taroshuntaro blog
 subheading: ちゃんと文字に残さなきゃ。
 ---
