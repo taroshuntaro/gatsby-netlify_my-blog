@@ -28,23 +28,24 @@ class BlogRoll extends React.Component {
                         </p>
                       </header>
                       {/* ▼▼▼ 記事本文（一部） ▼▼▼ */}
-                      <p style={{ color: 'rgb(128, 128, 128)' }}>
-                        {post.excerpt}
-                      </p>
-                      <br />
+                      <p style={{ color: 'gray' }}>{post.excerpt}</p>
                       {/* ▼▼▼ 投稿日時 ▼▼▼ */}
-                      <span className="tag">
-                        投稿日：{post.frontmatter.date}
+                      <span style={{ fontSize: '0.7em', color: 'gray' }}>
+                        投稿日：
                       </span>
-                      <br />
+                      <span className="tag">{post.frontmatter.date}</span>
                       {post.frontmatter.tags && post.frontmatter.tags.length ? (
-                        <div className="tag">
-                          タグ：
+                        <div className="tags" style={{ paddingTop: '0.3em' }}>
+                          <span style={{ fontSize: '0.7em', color: 'gray' }}>
+                            タグ：
+                          </span>
                           {post.frontmatter.tags.map(tag => (
-                            <span key={tag + `tag`}>
-                              <Link to={`/tags/${kebabCase(tag)}/`}>
-                                &nbsp;"{tag}"&nbsp;
-                              </Link>
+                            <span
+                              key={tag + `tag`}
+                              className="tag"
+                              style={{ margin: '0', marginRight: '0.5em' }}
+                            >
+                              <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
                             </span>
                           ))}
                         </div>
