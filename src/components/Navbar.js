@@ -1,7 +1,11 @@
 import React from 'react';
 import { Link } from 'gatsby';
+//import logo from '../img/logo.svg';
+import Icon from '../img/site-icon.jpg';
 import github from '../img/github-icon.svg';
-import logo from '../img/logo.svg';
+import facebook from '../img/social/facebook.svg';
+import instagram from '../img/social/instagram.svg';
+import twitter from '../img/social/twitter.svg';
 
 const Navbar = class extends React.Component {
   constructor(props) {
@@ -42,7 +46,8 @@ const Navbar = class extends React.Component {
         <div className="container">
           <div className="navbar-brand">
             <Link to="/" className="navbar-item" title="Logo">
-              <img src={logo} alt="Kaldi" style={{ width: '88px' }} />
+              <img src={Icon} alt="SiteIcon" style={{ borderRadius: '1em' }} />
+              &nbsp;&nbsp;taroshuntaro blog
             </Link>
             {/* Hamburger menu */}
             <div
@@ -73,22 +78,48 @@ const Navbar = class extends React.Component {
             </div>
             */}
             <div className="navbar-end has-text-centered">
-              <a
-                className="navbar-item"
-                href="https://github.com/netlify-templates/gatsby-starter-netlify-cms"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span className="icon">
-                  <img src={github} alt="Github" />
-                </span>
-              </a>
+              <SocialIcon
+                ankerHref="https://github.com/taroshuntaro/"
+                imgSrc={github}
+                imgAlt="Github"
+              />
+              <SocialIcon
+                ankerHref="https://ja-jp.facebook.com/"
+                imgSrc={facebook}
+                imgAlt="Facebook"
+              />
+              <SocialIcon
+                ankerHref="https://twitter.com/"
+                imgSrc={twitter}
+                imgAlt="Twitter"
+              />
+              <SocialIcon
+                ankerHref="https://www.instagram.com/?hl=ja"
+                imgSrc={instagram}
+                imgAlt="Instagram"
+              />
             </div>
           </div>
         </div>
       </nav>
     );
   }
+};
+
+// ソーシャルメディアへのリンクアイコン
+const SocialIcon = ({ ankerHref, imgSrc, imgAlt }) => {
+  return (
+    <a
+      className="navbar-item"
+      href={ankerHref}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <span className="icon">
+        <img src={imgSrc} alt={imgAlt} />
+      </span>
+    </a>
+  );
 };
 
 export default Navbar;
