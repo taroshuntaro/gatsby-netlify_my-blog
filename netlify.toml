@@ -5,3 +5,7 @@
 [build.environment]
   YARN_VERSION = "1.9.4"
   YARN_FLAGS = "--no-ignore-optional"
+[[redirects]]
+  from = "/blog"
+  to = "/"
+  force = true
