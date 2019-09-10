@@ -5,7 +5,14 @@
 [build.environment]
   YARN_VERSION = "1.9.4"
   YARN_FLAGS = "--no-ignore-optional"
+
 [[redirects]]
   from = "/blog"
   to = "/"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/blog/*"
+  to = "/:splat"
+  status = 301
   force = true
