@@ -9,10 +9,8 @@
 [[redirects]]
   from = "/blog"
   to = "/"
-  status = 301
   force = true
 [[redirects]]
   from = "/blog/*"
   to = "/:splat"
-  status = 301
   force = true
