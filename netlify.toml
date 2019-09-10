@@ -10,7 +10,7 @@
   from = "/blog"
   to = "/"
   force = true
-[[redirects]]
-  from = "/blog/*"
-  to = "/:splat"
-  force = true
+# [[redirects]]
+#   from = "/blog/*"
+#   to = "/:splat"
+#   force = true
