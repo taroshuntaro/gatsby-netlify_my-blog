@@ -148,3 +148,10 @@ $menu-label-color: $white-ter
     text-align: center;
     max-width: 70%;
     margin: 0 0 1em;
+
+// 20190914 add
+// gatsby-remark-vscode導入後、意図しない背景色になっていた
+// ⇨ bulma.cssでcode要素に指定された背景色が影響していた ⇨ 色系のstyle解除
+code
+  background-color: initial;
+  color: initial;
