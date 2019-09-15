@@ -7,6 +7,9 @@ public_folder: /img
 
 publish_mode: editorial_workflow
 
+slug:
+  encoding: "ascii"
+
 collections:
   - name: "blog"
     label: "Blog"
