@@ -104,6 +104,38 @@ export default () => (
                 date(formatString: "YYYY/MM/DD")
                 tags
                 featuredpost
+              }
+            }
+          }
+        }
+      }
+    `}
+    render={(data, count) => <BlogRoll data={data} count={count} />}
+  />
+);
+
+/* featuredimageが設定されている記事が一つもない場合のエラー回避について考慮
+export default () => (
+  <StaticQuery
+    query={graphql`
+      query BlogRollQuery {
+        allMarkdownRemark(
+          sort: { order: DESC, fields: [frontmatter___date] }
+          filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
+        ) {
+          edges {
+            node {
+              excerpt(pruneLength: 150)
+              id
+              fields {
+                slug
+              }
+              frontmatter {
+                title
+                templateKey
+                date(formatString: "YYYY/MM/DD")
+                tags
+                featuredpost
                 featuredimage {
                   childImageSharp {
                     fluid(maxWidth: 120, quality: 100) {
@@ -120,3 +152,4 @@ export default () => (
     render={(data, count) => <BlogRoll data={data} count={count} />}
   />
 );
+*/
