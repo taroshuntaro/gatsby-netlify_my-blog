@@ -28,7 +28,7 @@ PreviewCompatibleImage.propTypes = {
     childImageSharp: PropTypes.object,
     image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
     style: PropTypes.object
-  }).isRequired
+  })
 };
 
 export default PreviewCompatibleImage;
