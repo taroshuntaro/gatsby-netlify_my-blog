@@ -5,6 +5,7 @@ import Helmet from 'react-helmet';
 import { graphql, Link } from 'gatsby';
 import Layout from '../components/Layout';
 import Content, { HTMLContent } from '../components/Content';
+import 'gatsby-remark-vscode/styles.css';
 
 export const BlogPostTemplate = ({
   content,
@@ -43,7 +44,7 @@ export const BlogPostTemplate = ({
                 ))}
               </div>
             ) : null}
-            <PostContent content={content} />
+            <PostContent content={content} className="blog-post-content" />
           </div>
         </div>
       </div>
@@ -54,9 +55,10 @@ export const BlogPostTemplate = ({
 BlogPostTemplate.propTypes = {
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
-  description: PropTypes.string,
   title: PropTypes.string,
   date: PropTypes.string,
+  description: PropTypes.string,
+  ogType: PropTypes.string,
   helmet: PropTypes.object
 };
 
@@ -70,11 +72,15 @@ const BlogPost = ({ data }) => {
         contentComponent={HTMLContent}
         helmet={
           <Helmet titleTemplate="%s | Blog">
+            {/* header内の下記情報を書き換える */}
             <title>{`${post.frontmatter.title}`}</title>
+            <meta property="og:type" content={post.frontmatter.ogType} />
             <meta
-              name="description"
-              content={`${post.frontmatter.description}`}
+              property="og:title"
+              content={`${post.frontmatter.title} | Blog`}
             />
+            <meta property="og:url" content="/" />
+            <meta name="description" content={post.frontmatter.description} />
           </Helmet>
         }
         tags={post.frontmatter.tags}
@@ -102,6 +108,7 @@ export const pageQuery = graphql`
         date(formatString: "YYYY/MM/DD")
         title
         description
+        ogType
         tags
       }
     }

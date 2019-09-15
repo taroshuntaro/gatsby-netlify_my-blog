@@ -20,20 +20,8 @@ const TemplateWrapper = ({ children }) => {
           href={`${withPrefix('/')}img/favicon.jpg`}
           sizes="16x16"
         />
-        {/*
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href={`${withPrefix('/')}img/apple-touch-icon.png`}
-        />
-        <link
-          rel="mask-icon"
-          href={`${withPrefix('/')}img/safari-pinned-tab.svg`}
-          color="#ff4400"
-        />
-        */}
         <meta name="theme-color" content="#fff" />
-        <meta property="og:type" content="business.business" />
+        <meta property="og:type" content="website" />
         <meta property="og:title" content={title} />
         <meta property="og:url" content="/" />
         <meta
