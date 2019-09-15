@@ -79,7 +79,7 @@ const BlogPost = ({ data }) => {
               property="og:title"
               content={`${post.frontmatter.title} | Blog`}
             />
-            <meta property="og:url" content="/" />
+            <meta property="og:url" content={post.fields.slug} />
             <meta name="description" content={post.frontmatter.description} />
           </Helmet>
         }
@@ -110,6 +110,9 @@ export const pageQuery = graphql`
         description
         ogType
         tags
+      }
+      fields {
+        slug
       }
     }
   }
