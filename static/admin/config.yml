@@ -12,8 +12,8 @@ collections:
     label: "Blog"
     folder: "src/pages/blog"
     create: true
-    slug:
-      encoding: "ascii"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+      - encoding: "ascii"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
       - {label: "Title", name: "title", widget: "string"}
