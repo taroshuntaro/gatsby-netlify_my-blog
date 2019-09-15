@@ -10,6 +10,6 @@ tags:
   - 備忘録
 ---
 ## てすと
-```javascripy
+```javascript
 let str = '';
 ```
