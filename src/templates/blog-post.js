@@ -23,8 +23,13 @@ export const BlogPostTemplate = ({
       <div className="container content">
         <div className="columns">
           <div className="column is-10 is-offset-1">
-            <span style={{ fontSize: '1em', color: 'gray' }}>{date}</span>
+            <span
+              style={{ fontSize: '1em', fontWeight: 'bold', color: 'gray' }}
+            >
+              {date}
+            </span>
             <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
+              <span style={{ color: 'cadetblue' }}>#&nbsp;</span>
               {title}
             </h1>
             {tags && tags.length ? (
@@ -36,10 +41,13 @@ export const BlogPostTemplate = ({
                     style={{
                       margin: '0',
                       marginRight: '0.5em',
-                      marginBottom: '1rem'
+                      marginBottom: '1rem',
+                      backgroundColor: 'cadetblue'
                     }}
                   >
-                    <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+                    <Link to={`/tags/${kebabCase(tag)}/`}>
+                      <span style={{ color: 'white' }}>{tag}</span>
+                    </Link>
                   </span>
                 ))}
               </div>
