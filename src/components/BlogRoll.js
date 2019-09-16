@@ -13,7 +13,7 @@ class BlogRoll extends React.Component {
       <div className="columns is-multiline">
         {posts &&
           posts.map(({ node: post }) => (
-            <div className="is-parent column is-12" key={post.id}>
+            <div className="is-parent column is-8  is-offset-2" key={post.id}>
               <Link to={post.fields.slug}>
                 <article
                   className={`blog-list-item tile is-child box notification}`}
@@ -23,6 +23,7 @@ class BlogRoll extends React.Component {
                       <header>
                         <p className="post-meta">
                           <span className="title is-size-4">
+                            <span style={{ color: 'cadetblue' }}>#&nbsp;</span>
                             {post.frontmatter.title}
                           </span>
                         </p>
@@ -32,39 +33,41 @@ class BlogRoll extends React.Component {
                       {/* ▼▼▼ 投稿日時 ▼▼▼ */}
                       <span style={{ fontSize: '0.7em', color: 'gray' }}>
                         投稿日：
+                        <span style={{ fontWeight: 'bold' }}>
+                          {post.frontmatter.date}
+                        </span>
                       </span>
-                      <span className="tag">{post.frontmatter.date}</span>
+                      {/* ▼▼▼ タグ ▼▼▼ */}
                       {post.frontmatter.tags && post.frontmatter.tags.length ? (
                         <div className="tags" style={{ paddingTop: '0.3em' }}>
-                          <span style={{ fontSize: '0.7em', color: 'gray' }}>
+                          <span
+                            style={{
+                              marginBottom: '0.5em',
+                              fontSize: '0.7em',
+                              color: 'gray'
+                            }}
+                          >
                             タグ：
                           </span>
                           {post.frontmatter.tags.map(tag => (
                             <span
                               key={tag + `tag`}
                               className="tag"
-                              style={{ margin: '0', marginRight: '0.5em' }}
+                              style={{
+                                margin: '0',
+                                marginRight: '0.5em',
+                                marginBottom: '0.5em',
+                                backgroundColor: 'cadetblue'
+                              }}
                             >
-                              <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+                              <Link to={`/tags/${kebabCase(tag)}/`}>
+                                <span style={{ color: 'white' }}>{tag}</span>
+                              </Link>
                             </span>
                           ))}
                         </div>
                       ) : null}
                     </div>
-                    {/* TODO:サムネイルの表示方法考案と適用
-                    <div className="column is-4">
-                      {post.frontmatter.featuredimage ? (
-                        <div className="featured-thumbnail">
-                          <PreviewCompatibleImage
-                            imageInfo={{
-                              image: post.frontmatter.featuredimage,
-                              alt: `featured image thumbnail for post ${post.title}`
-                            }}
-                          />
-                        </div>
-                      ) : null}
-                    </div>
-                    */}
                   </div>
                 </article>
               </Link>
@@ -93,7 +96,7 @@ export default () => (
         ) {
           edges {
             node {
-              excerpt(pruneLength: 150)
+              excerpt(pruneLength: 75)
               id
               fields {
                 slug
@@ -113,43 +116,3 @@ export default () => (
     render={(data, count) => <BlogRoll data={data} count={count} />}
   />
 );
-
-/* featuredimageが設定されている記事が一つもない場合のエラー回避について考慮
-export default () => (
-  <StaticQuery
-    query={graphql`
-      query BlogRollQuery {
-        allMarkdownRemark(
-          sort: { order: DESC, fields: [frontmatter___date] }
-          filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
-        ) {
-          edges {
-            node {
-              excerpt(pruneLength: 150)
-              id
-              fields {
-                slug
-              }
-              frontmatter {
-                title
-                templateKey
-                date(formatString: "YYYY/MM/DD")
-                tags
-                featuredpost
-                featuredimage {
-                  childImageSharp {
-                    fluid(maxWidth: 120, quality: 100) {
-                      ...GatsbyImageSharpFluid
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    `}
-    render={(data, count) => <BlogRoll data={data} count={count} />}
-  />
-);
-*/
