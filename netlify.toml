@@ -8,8 +8,11 @@
 
 [[redirects]]
   from = "/blog"
-  to = "/"
+  to = "/404"
   force = true
+  status = 404
+
+# フロントURLから管理画面へのアクセスを拒否
 [[redirects]]
   from = "https://taroshuntaro.me/admin"
   to = "https://taroshuntaro.me/404"
