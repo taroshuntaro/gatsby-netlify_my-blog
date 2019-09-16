@@ -10,7 +10,8 @@
   from = "/blog"
   to = "/"
   force = true
-# [[redirects]]
-#   from = "/blog/*"
-#   to = "/:splat"
-#   force = true
+[[redirects]]
+  from = "https://taroshuntaro.me/admin"
+  to = "https://taroshuntaro.me/404"
+  force = true
+  status = 404
