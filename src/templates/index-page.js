@@ -33,12 +33,13 @@ export const IndexPageTemplate = ({ image, title, subheading }) => (
             color: 'white',
             lineHeight: '1',
             letterSpacing: '1px',
+            textAlign: 'center',
             padding: '0.25em'
           }}
         >
           {title}
           <br />
-          <span className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen">
+          <span className="has-text-weight-bold is-size-7-mobile is-size-7-tablet is-size-6-widescreen">
             {subheading}
           </span>
         </h1>
