@@ -57,7 +57,7 @@ const Footer = class extends React.Component {
               </div>
             </div>
             <div className="copyright" style={{ paddingBottom: '1rem' }}>
-              © 2019 taroshuntaro's blog
+              © 2019 taroshuntaro blog
             </div>
           </div>
         </div>

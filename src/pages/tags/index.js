@@ -14,7 +14,11 @@ const TagsPage = ({
 }) => (
   <Layout>
     <section className="section">
-      <Helmet title={`Tags | ${title}`} />
+      <Helmet title={`Tags | ${title}`}>
+        <meta property="og:title" content={`Tags | ${title}`} />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="/tags/" />
+      </Helmet>
       <div className="container content">
         <div className="columns">
           <div
