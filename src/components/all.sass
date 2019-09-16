@@ -1,10 +1,6 @@
 @import "~bulma/sass/utilities/initial-variables"
 @import url(https://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
 
-// Google Font
-body 
-  font-family: 'Noto Sans Japanese' sans-serif
-
 // Config vars
 // Kaldi logo brand color: #FD461E
 $kaldi-red: #D64000
@@ -127,13 +123,6 @@ $menu-label-color: $white-ter
   flex-basis: 35%;
   margin: 0 1.5em 0 0;
 
-// blog post content sytle ( markdown )
-.blog-post-content h2
-  padding: 0.25em 0.5em
-  color: #494949
-  background: transparent
-  border-left: solid 5px #7db4e6
-
 @import "~bulma"
 
 // responsiveness
@@ -149,9 +138,33 @@ $menu-label-color: $white-ter
     max-width: 70%;
     margin: 0 0 1em;
 
+// ========================================
+
+// spサイズで若干の横スクロールが発生してしまう対処
+html
+  overflow: auto;
+body
+  overflow: hidden;
+
+// Google Font
+body 
+  font-family: 'Noto Sans Japanese' sans-serif
+
+// blog post content sytle ( markdown )
+.content h2
+  padding: 0.25em 0.5em
+  color: #494949
+  background: transparent
+  border-left: solid 5px #7db4e6
+// 20190916 blockquoteにstyleが効かない
+.content blockquote
+  background-color: #f5f5f5 !important
+  border-left: solid 5px #dbdbdb !important
+
 // 20190914 add
 // gatsby-remark-vscode導入後、意図しない背景色になっていた
 // ⇨ bulma.cssでcode要素に指定された背景色が影響していた ⇨ 色系のstyle解除
 code
   background-color: initial;
   color: initial;
+  font-family: Consolas;

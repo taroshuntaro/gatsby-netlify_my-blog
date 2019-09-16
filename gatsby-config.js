@@ -40,7 +40,7 @@ module.exports = {
             resolve: `gatsby-remark-vscode`,
             // All options are optional. Defaults shown here.
             options: {
-              colorTheme: 'Dark+ (default dark)', // Read on for list of included themes. Also accepts object and function forms.
+              colorTheme: 'Dark+ (default dark)' // Read on for list of included themes. Also accepts object and function forms.
             }
           },
           {
