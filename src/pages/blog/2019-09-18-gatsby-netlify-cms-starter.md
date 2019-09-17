@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Gatsby + Netlify CMS Starterでブログを始めました。
-date: 2019-09-17T15:10:00.000Z
+date: 2019-09-18T00:00:00.000Z
 description: >-
   Gatsby + Netlify CMS
   Starterでブログを始めました。仕事ではJavaでサーバーサイド書いて、個人ではフロントもやっていきたい私の備忘録的な技術ブログです。
