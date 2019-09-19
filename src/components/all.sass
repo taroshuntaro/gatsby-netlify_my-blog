@@ -31,7 +31,7 @@ $black: #2b2523
 // Helper Classes
 .full-width-image-container
   width: 100vw
-  height: 400px
+  height: 300px
   position: relative
   left: 50%
   right: 50%
@@ -44,7 +44,7 @@ $black: #2b2523
 
 .full-width-image
     width: 100vw
-    height: 400px
+    height: 300px
     background-size: cover
     background-position: bottom
     display: flex
@@ -151,17 +151,17 @@ body
 .blog-post-content h2
   padding: 0.25em 0.5em
   color: #494949
-  background: transparent
-  border-left: solid 5px #7db4e6
+  //background: transparent
+  border-left: solid 5px cadetblue
 // 20190916 blockquoteにstyleが効かない
-.blog-post-content blockquote
-  background-color: #f5f5f5 !important
-  border-left: solid 5px #dbdbdb !important
+blockquote
+  background-color: #f5f5f5
+  border-left: solid 5px #dbdbdb
 
 // 20190914 add
 // gatsby-remark-vscode導入後、意図しない背景色になっていた
 // ⇨ bulma.cssでcode要素に指定された背景色が影響していた ⇨ 色系のstyle解除
-.blog-post-content code
+code
   background-color: initial;
   color: initial;
   font-family: Consolas;
