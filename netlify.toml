@@ -8,9 +8,8 @@
 
 [[redirects]]
   from = "/blog"
-  to = "/404"
+  to = "/"
   force = true
-  status = 404
 
 # フロントURLから管理画面へのアクセスを拒否
 [[redirects]]
