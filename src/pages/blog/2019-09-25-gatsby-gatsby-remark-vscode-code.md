@@ -7,6 +7,9 @@ description: >-
 
   gatsby-remark-vscodeというプラグインを使って実現したときのメモ。
 ogType: article
+tags:
+  - Gatsby
+  - JavaScript
 ---
 markdownで書いた記事のcodeブロックにダークでかっこいいstyleを適用したいと思い、  
 **gatsby-remark-vscode**というプラグインを使って実現したときのメモ。
@@ -19,7 +22,7 @@ markdownで書いた記事のcodeブロックにダークでかっこいいstyle
 npm install gatsby-remark-vscode
 ```
 
-**gatsby-config.js**に以下の記述を追加。
+**gatsby-config.js**に以下の記述を追加。  
 （今回はオプションは最低限の設定）
 ```js
 resolve: 'gatsby-transformer-remark',
