@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: '[Gatsby + Netlify] netlify.tomlでredirectを実現する'
-date: 2019-10-03T03:58:45.836Z
+date: 2019-10-03T12:58:45.836Z
 description: |-
   Netlifyを使用しているアプリでリダイレクトを実現する方法はいくつかありますが、  
   今回私はnetlify.tomlにリダイレクトルールを記述する方法で実現したのでそのときのメモ。
