@@ -52,10 +52,7 @@ export const BlogPostTemplate = ({
                 ))}
               </div>
             ) : null}
-            <PostContent
-              content={content}
-              className="content blog-post-content"
-            />
+            <PostContent content={content} className="blog-post-content" />
           </div>
         </div>
       </div>
