@@ -7,7 +7,7 @@ import BlogRoll from '../components/BlogRoll';
 export const IndexPageTemplate = ({ image, title, subheading }) => (
   <div>
     <div
-      className="full-width-image margin-top-0"
+      className='full-width-image margin-top-0'
       style={{
         backgroundImage: `url(${
           !!image.childImageSharp ? image.childImageSharp.fluid.src : image
@@ -27,7 +27,7 @@ export const IndexPageTemplate = ({ image, title, subheading }) => (
         }}
       >
         <h1
-          className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
+          className='has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen'
           style={{
             backgroundColor: 'rgba(128, 128, 128, 0.5)',
             color: 'white',
@@ -39,18 +39,18 @@ export const IndexPageTemplate = ({ image, title, subheading }) => (
         >
           {title}
           <br />
-          <span className="has-text-weight-bold is-size-7-mobile is-size-7-tablet is-size-6-widescreen">
+          <span className='has-text-weight-bold is-size-7-mobile is-size-7-tablet is-size-6-widescreen'>
             {subheading}
           </span>
         </h1>
       </div>
     </div>
-    <section className="section section--gradient">
-      <div className="container">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
+    <section className='section section--gradient'>
+      <div className='container'>
+        <div className='columns'>
+          <div className='column is-10 is-offset-1'>
             {/* 記事一覧 */}
-            <div className="content">
+            <div className='content'>
               <BlogRoll />
             </div>
           </div>

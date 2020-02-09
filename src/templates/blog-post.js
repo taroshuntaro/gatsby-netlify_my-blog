@@ -18,26 +18,26 @@ export const BlogPostTemplate = ({
   const PostContent = contentComponent || Content;
 
   return (
-    <section className="section">
+    <section className='section'>
       {helmet || ''}
-      <div className="container content">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
+      <div className='container content'>
+        <div className='columns'>
+          <div className='column is-10 is-offset-1'>
             <span
               style={{ fontSize: '1em', fontWeight: 'bold', color: 'gray' }}
             >
               {date}
             </span>
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
+            <h1 className='title is-size-2 has-text-weight-bold is-bold-light'>
               <span style={{ color: 'cadetblue' }}>#&nbsp;</span>
               {title}
             </h1>
             {tags && tags.length ? (
-              <div className="tags">
+              <div className='tags'>
                 {tags.map(tag => (
                   <span
                     key={tag + `tag`}
-                    className="tag"
+                    className='tag'
                     style={{
                       margin: '0',
                       marginRight: '0.5em',
@@ -52,7 +52,7 @@ export const BlogPostTemplate = ({
                 ))}
               </div>
             ) : null}
-            <PostContent content={content} className="blog-post-content" />
+            <PostContent content={content} className='blog-post-content' />
           </div>
         </div>
       </div>
@@ -79,16 +79,16 @@ const BlogPost = ({ data }) => {
         content={post.html}
         contentComponent={HTMLContent}
         helmet={
-          <Helmet titleTemplate="%s | Blog">
+          <Helmet titleTemplate='%s | Blog'>
             {/* header内の下記情報を書き換える */}
             <title>{`${post.frontmatter.title}`}</title>
-            <meta property="og:type" content={post.frontmatter.ogType} />
+            <meta property='og:type' content={post.frontmatter.ogType} />
             <meta
-              property="og:title"
+              property='og:title'
               content={`${post.frontmatter.title} | Blog`}
             />
-            <meta property="og:url" content={post.fields.slug} />
-            <meta name="description" content={post.frontmatter.description} />
+            <meta property='og:url' content={post.fields.slug} />
+            <meta name='description' content={post.frontmatter.description} />
           </Helmet>
         }
         tags={post.frontmatter.tags}
